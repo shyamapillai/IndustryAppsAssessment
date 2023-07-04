@@ -1,0 +1,57 @@
+h1 {
+    color: #0096FF;
+    text-align: center;
+}
+.sub-cate-card {
+
+    margin: 10px;
+}
+::ng-deep .mat-mdc-tab-list .mat-mdc-tab-labels > div {
+    margin: 10px;
+    color: #0096FF;
+    border: 1px outset #ccc;
+    border-radius: 5px;
+}
+::ng-deep .mat-mdc-tab-list .mdc-tab--active  {
+   background-color: #ccc;
+   color: #0096FF;
+}
+.tab-card{
+    text-align: center;
+    width: 100%;
+}
+.roles{
+    text-align: left;
+    width: 200px;
+    margin: 0 auto;
+}
+.m-1 {
+    margin: 16px 0;
+}
+.sub-cate-role{
+    mat-label {
+        width:85%
+    }
+    button {
+        width:10%;        
+        margin: 0;
+        padding: 0;
+        min-width: 10px;
+    }
+    border: 2px solid #ccc;
+    padding: 10px;
+    width: 180px;
+    display: flex;
+}
+.sub-cate-role-add{
+    button {
+        width:10%;        
+        margin: 0;
+        padding: 0;
+        min-width: 10px;
+        font-size:16px;    }
+}
+.form-field {
+    margin-top: 30px;
+    width: 200px;
+}

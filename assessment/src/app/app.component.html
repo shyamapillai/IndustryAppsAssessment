@@ -1,0 +1,37 @@
+
+<h1>My Assessment</h1>
+
+<mat-tab-group (selectedTabChange)="clearInput()">
+  <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab.category">
+    <ng-template matTabContent>
+    <mat-card>
+      <mat-card-actions>
+        <div  class="tab-card">
+        <ng-container *ngFor="let subCategory of tab.subCategory">          
+            <button mat-raised-button class="sub-cate-card"> {{subCategory.label}}</button>
+        </ng-container>
+        <div  class="roles">
+          <mat-form-field class="form-field">
+            <input matInput type="text" [(ngModel)]="role" placeholder="Add Role">
+            <button *ngIf="role" matSuffix mat-icon-button aria-label="Clear" (click)="addRole(tab)">
+            +
+            </button>
+          </mat-form-field>
+        <div  class=" m-1">
+          <ng-container *ngFor="let subCategory of tab.subCategory;  let i = index">
+            <div class=" m-1 sub-cate-role">
+              <mat-label>{{subCategory.role}}</mat-label>
+              <button mat-button aria-label="Clear" (click)="clearRole(i, tab)">x</button>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+        
+    </mat-card-actions>
+    </mat-card>     
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>
+
+<router-outlet></router-outlet>
